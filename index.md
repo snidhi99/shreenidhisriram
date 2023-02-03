@@ -1,7 +1,7 @@
-# Akshaya Jagannadharao
+# Shreenidhi Sriram
 ## Contact
-School Email: akshaya2@illinois.edu
-Personal Email: jagaskak@gmail.com
+School Email: shreenidhi.sriram@utdallas.edu
+Personal Email: snidhi1999@gmail.com
 
 ## Projects
 Rando Projects
