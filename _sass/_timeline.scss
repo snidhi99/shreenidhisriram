@@ -1,0 +1,190 @@
+:root {
+  --education: #008390;
+  --research: #69b7b4;
+  --experience: #8c2d67;
+  --years: #7c854e;
+  
+  --blue: #347EA1;
+  --light-blue: #33a8a5;
+  --purple: #81537F;
+  --white: #ffffff;
+  --dark-purple: #595775;
+  --light-purple: #ABA6BF; 
+  --muted-pink: #BF988F;
+  --brown: #583E2E;
+  --light-grey: #f4f4f4;
+  --med-grey: #ddd;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltiptext {
+  display: block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 45vw;
+  max-height: 250px;
+  background-color: white;
+  color: black;
+  text-align: left;
+  border: 1px solid #f5f5f5;
+  border-radius: 5px;
+  box-shadow: 1px 3px 8px rgba(39, 44, 49, 0.3), 1px 3px 8px rgba(39, 44, 49, 0.03);
+  padding: 10px;
+  
+  /* Position the tooltip */
+  position: absolute;
+  top: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tooltip-h2 {
+	text-align: left;
+	margin-top: 0;
+  margin-bottom: 0;
+}
+
+.tooltip-h5 {
+  text-align: left;
+  color: grey;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.timeline-header {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  margin: 0 auto 10px auto;
+  background: transparent;
+  font-family: system-ui;
+}
+
+.legend {
+  display: flex;  
+  justify-content: flex-end;
+  background-color: transparent;
+/*   padding:  0; */
+  margin-left: auto;
+  margin-right: 5px;
+  margin-top: 20px;
+  font-family: system-ui;
+}
+
+.element {
+  display: inline-block;
+  padding: 10px 0;
+  margin-left: 10px;
+}
+
+.color {
+  display: inline-block;
+  border-radius: 2px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid transparent;
+  vertical-align: middle
+}
+
+.name {
+  height: 100%;
+  margin: auto;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.gantt {
+  font-family: system-ui;
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.2),
+      1px 3px 8px rgba(39, 44, 49, 0.03);
+
+  display: grid;
+  grid-template-columns:
+    [y16-jan] 1fr [y16-feb] 1fr [y16-mar] 1fr [y16-apr] 1fr [y16-may] 1fr [y16-jun] 1fr [y16-jul] 1fr [y16-aug] 1fr [y16-sep] 1fr [y16-oct] 1fr [y16-nov] 1fr [y16-dec] 1fr
+    [y17-jan] 1fr [y17-feb] 1fr [y17-mar] 1fr [y17-apr] 1fr [y17-may] 1fr [y17-jun] 1fr [y17-jul] 1fr [y17-aug] 1fr [y17-sep] 1fr [y17-oct] 1fr [y17-nov] 1fr [y17-dec] 1fr
+    [y18-jan] 1fr [y18-feb] 1fr [y18-mar] 1fr [y18-apr] 1fr [y18-may] 1fr [y18-jun] 1fr [y18-jul] 1fr [y18-aug] 1fr [y18-sep] 1fr [y18-oct] 1fr [y18-nov] 1fr [y18-dec] 1fr
+    [y19-jan] 1fr [y19-feb] 1fr [y19-mar] 1fr [y19-apr] 1fr [y19-may] 1fr [y19-jun] 1fr [y19-jul] 1fr [y19-aug] 1fr [y19-sep] 1fr [y19-oct] 1fr [y19-nov] 1fr [y19-dec] 1fr
+    [y20-jan] 1fr [y20-feb] 1fr [y20-mar] 1fr [y20-apr] 1fr [y20-may] 1fr [y20-jun] 1fr [y20-jul] 1fr [y20-aug] 1fr [y20-sep] 1fr [y20-oct] 1fr [y20-nov] 1fr [y20-dec] 1fr
+    [y21-jan] 1fr [y21-feb] 1fr [y21-mar] 1fr [y21-apr] 1fr [y21-may] 1fr [y21-jun] 1fr [y21-jul] 1fr [y21-aug] 1fr [y21-sep] 1fr [y21-oct] 1fr [y21-nov] 1fr [y21-dec];
+
+  grid-gap: 20px 0px;
+  margin: 0 auto;
+}
+
+
+/* dividers */
+.divider {
+  border-left: 1px solid var(--med-grey); 
+  grid-row: 1 / span 5;
+  z-index: 1;
+}
+
+span.y-1 { grid-column: 12; }
+span.y-2 { grid-column: 24; }
+span.y-3 { grid-column: 36; }
+span.y-4 { grid-column: 48; }
+span.y-5 { grid-column: 60; }
+span.y-6 { grid-column: 72; }
+
+/* years */
+h3 {
+  text-align: center;
+  grid-row: 1;
+
+  color: white;
+  background-color: var(--years);
+  padding: 10px 0;
+  margin: 0;
+  border-top: 0 !important;
+}
+
+h3.h-y16 { grid-column: 1 / span 12; border-top-left-radius: 10px; }
+h3.h-y17 { grid-column: 12 / span 12; }
+h3.h-y18 { grid-column: 24 / span 12; }
+h3.h-y19 { grid-column: 36 / span 12; }
+h3.h-y20 { grid-column: 48 / span 12; }
+h3.h-y21 { grid-column: 60 / span 12; border-top-right-radius: 10px; }
+
+/* tasks */
+.gantt div {
+  color: white;
+  font-size: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  overflow-wrap: break-word;
+  z-index: 2;
+}
+
+@media only screen and (min-width: 600px) {
+  .gantt div { 
+    font-size: 12px;
+  }
+}
+
+/* specific task styles */
+.t-1 { background: var(--education); grid-row: 2;}
+.t-2 { background: var(--research); grid-row: 3;}
+.t-3 { background: var(--experience); grid-row: 4;}
+.t-4 { background: #6a478f; grid-row: 5;}
+.t-5 { background: #da6f2b; grid-row: 6;}
+.t-6 { background: #3d8bb1; grid-row: 7;}
+.t-7 { background: #e03f3f; grid-row: 8;}
+.t-8 { background: #59a627; grid-row: 9;}
+.t-9 { background: #4464a1; grid-row: 10;}
