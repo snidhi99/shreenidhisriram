@@ -1,5 +1,5 @@
-# Personal Website
-Hi! Thanks for visiting! I'm proud to present the first iteration of my website. There is still much I would like to add, so please stay tuned. 
+# My Portfolio
+Hi there! Let me introduce myself, I'm Shreenidhi Sriram. Thanks for visiting my page! I'm proud to present the first iteration of my website. There is still much I would like to add, so please stay tuned. 
 
 ## TODO
 ##### *Not in an particular order*
