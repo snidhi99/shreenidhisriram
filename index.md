@@ -4,7 +4,7 @@ School Email: shreenidhi.sriram@utdallas.edu
 Personal Email: snidhi1999@gmail.com
 
 ## Projects
-Rando Projects
+Random Projects
 
 ## Interests
 Reading
