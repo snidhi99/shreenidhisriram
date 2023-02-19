@@ -19,3 +19,4 @@ This website was inspired by:
 
 Pictures:
 * Server - Photo by Brett Sayles from Pexels
+* Google images
