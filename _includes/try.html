@@ -25,7 +25,6 @@
 
         .card-slider {
             display: flex;
-            animation: slide 30s linear infinite; /* Adjust the animation duration */
         }
 
         .card {
@@ -37,25 +36,11 @@
             text-align: center;
         }
 
-        @keyframes slide {
-            0%, 100% {
-                transform: translateX(0);
-            }
-            10% {
-                transform: translateX(0);
-            }
-            20%, 30% {
-                transform: translateX(-100%);
-            }
-            40%, 50% {
-                transform: translateX(-200%);
-            }
-            60%, 70% {
-                transform: translateX(-300%);
-            }
-            80%, 90% {
-                transform: translateX(-400%);
-            }
+        .card img {
+            max-width: 100%; /* Ensure the image fits within the card width */
+            max-height: 100%; /* Ensure the image fits within the card height */
+            display: block; /* Remove any potential whitespace below the image */
+            margin: 0 auto; /* Center the image horizontally within the card */
         }
     </style>
 </head>
@@ -69,7 +54,7 @@
                 <div class="card-slider" id="slider">
                     <!-- Repeat this card structure for each recommendation -->
                     <div class="card">
-                        <img src="assets/static/images/john.png" alt="Recommendation 1"/>
+                        <img src="assets/static/images/john.png" alt="Recommendation 2"/>
                         <h3>Recommendation 1</h3>
                         <p>Content of Recommendation 1</p>
                     </div>
@@ -93,7 +78,8 @@
     <script>
         // JavaScript to automatically scroll the slider
         const slider = document.getElementById('slider');
-        
+        let scrollAmount = 1;
+
         function scroll() {
             if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
                 slider.scrollLeft = 0;
@@ -101,9 +87,12 @@
                 slider.scrollLeft += 1;
             }
         }
-        
+
         // Adjust the scroll speed by changing the second parameter (milliseconds)
-        const scrollInterval = setInterval(scroll, 80); // Increase the interval for slower scrolling
+        const scrollInterval = setInterval(scroll, 50); // Increase the interval for slower scrolling
     </script>
 </body>
 </html>
+
+                        
+
