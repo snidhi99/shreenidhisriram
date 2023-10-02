@@ -3,19 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recommendations Carousel</title>
+    <title>Your Portfolio</title>
     <style>
         /* Add your CSS styling for the card and slider container */
+        .wrapper {
+            /* Add your wrapper styles here */
+        }
+
+        .section-header {
+            /* Add your section header styles here */
+        }
+
+        .container {
+            /* Add your container styles here */
+        }
+
         .slider-container {
             width: 100%;
             overflow: hidden;
         }
-        
+
         .card-slider {
             display: flex;
-            animation: slide 20s linear infinite;
         }
-        
+
         .card {
             width: 300px;
             margin: 0 10px;
@@ -24,52 +35,56 @@
             padding: 20px;
             text-align: center;
         }
-
-        @keyframes slide {
-            0%, 100% {
-                transform: translateX(0);
-            }
-            10% {
-                transform: translateX(0);
-            }
-            20%, 30% {
-                transform: translateX(-100%);
-            }
-            40%, 50% {
-                transform: translateX(-200%);
-            }
-            60%, 70% {
-                transform: translateX(-300%);
-            }
-            80%, 90% {
-                transform: translateX(-400%);
-            }
-        }
     </style>
 </head>
 <body>
-    <div class="slider-container">
-        <div class="card-slider">
-            <!-- Repeat this card structure for each recommendation -->
-            <div class="card">
-                <img src="john.png" alt="Recommendation 1">
-                <h3>Recommendation 1</h3>
-                <p>Content of Recommendation 1</p>
+    <div class="wrapper" id="achievements">
+        <h2 class="section-header">Awards, Achievements & Certifications</h2>
+        <div class="container">
+
+            <!-- Include the automatic recommendations carousel here -->
+            <div class="slider-container">
+                <div class="card-slider" id="slider">
+                    <!-- Repeat this card structure for each recommendation -->
+                    <div class="card">
+                        <img src="image1.jpg" alt="Recommendation 1">
+                        <h3>Recommendation 1</h3>
+                        <p>Content of Recommendation 1</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="image2.jpg" alt="Recommendation 2">
+                        <h3>Recommendation 2</h3>
+                        <p>Content of Recommendation 2</p>
+                    </div>
+
+                    <!-- Add more cards as needed -->
+
+                </div>
             </div>
 
-            <div class="card">
-                <img src="david.png" alt="Recommendation 2">
-                <h3>Recommendation 2</h3>
-                <p>Content of Recommendation 2</p>
-            </div>
-
-            <!-- Add more cards as needed -->
+            <!-- Other content for awards, achievements, and certifications can go here -->
 
         </div>
     </div>
 
     <script>
-        // JavaScript can be added here if you need interactivity
+        // JavaScript to automatically scroll the slider
+        const slider = document.getElementById('slider');
+        let scrollAmount = 1;
+
+        function scroll() {
+            if (scrollAmount >= slider.scrollWidth - slider.clientWidth) {
+                scrollAmount = 1;
+            } else {
+                scrollAmount++;
+            }
+
+            slider.scrollTo(scrollAmount, 0);
+        }
+
+        // Adjust the scroll speed by changing the second parameter (milliseconds)
+        const scrollInterval = setInterval(scroll, 50);
     </script>
 </body>
 </html>
