@@ -25,7 +25,7 @@
 
         .card-slider {
             display: flex;
-            animation: slide 10s linear infinite;
+            animation: slide 30s linear infinite; /* Adjust the animation duration */
         }
 
         .card {
@@ -85,3 +85,25 @@
                 </div>
             </div>
 
+            <!-- Other content for awards, achievements, and certifications can go here -->
+
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to automatically scroll the slider
+        const slider = document.getElementById('slider');
+        
+        function scroll() {
+            if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
+                slider.scrollLeft = 0;
+            } else {
+                slider.scrollLeft += 1;
+            }
+        }
+        
+        // Adjust the scroll speed by changing the second parameter (milliseconds)
+        const scrollInterval = setInterval(scroll, 80); // Increase the interval for slower scrolling
+    </script>
+</body>
+</html>
