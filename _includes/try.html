@@ -25,6 +25,7 @@
 
         .card-slider {
             display: flex;
+            animation: slide 10s linear infinite;
         }
 
         .card {
@@ -34,6 +35,27 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             padding: 20px;
             text-align: center;
+        }
+
+        @keyframes slide {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            10% {
+                transform: translateX(0);
+            }
+            20%, 30% {
+                transform: translateX(-100%);
+            }
+            40%, 50% {
+                transform: translateX(-200%);
+            }
+            60%, 70% {
+                transform: translateX(-300%);
+            }
+            80%, 90% {
+                transform: translateX(-400%);
+            }
         }
     </style>
 </head>
@@ -63,28 +85,3 @@
                 </div>
             </div>
 
-            <!-- Other content for awards, achievements, and certifications can go here -->
-
-        </div>
-    </div>
-
-    <script>
-        // JavaScript to automatically scroll the slider
-        const slider = document.getElementById('slider');
-        let scrollAmount = 1;
-
-        function scroll() {
-            if (scrollAmount >= slider.scrollWidth - slider.clientWidth) {
-                scrollAmount = 1;
-            } else {
-                scrollAmount++;
-            }
-
-            slider.scrollTo(scrollAmount, 0);
-        }
-
-        // Adjust the scroll speed by changing the second parameter (milliseconds)
-        const scrollInterval = setInterval(scroll, 50);
-    </script>
-</body>
-</html>
